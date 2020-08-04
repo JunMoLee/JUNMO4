@@ -279,7 +279,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 	            switch (location) {
 			    
 			    case 0:
-	                   {                           for (int q=0; q<20; q+=kernel){
+	                   {                     for (int q=0; q<20; q+=kernel){
 			                                      for (int u=q; u<400; u+=20*kernel){ // classify input layer area
 		                                               for (int t=0; t<h; t++) {  // classify hidden layer area
 							        for (int m=t*hiddenpiece; m<(t+1)*hiddenpiece; m++)  {
@@ -294,6 +294,14 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 											
 											    	    param->associatedindex2[areanum][0]=bb*hiddenpiece;
 											     param->associatedindex2[areanum][1]=(bb+1)*hiddenpiece-1;
+											    for(int i=  0; i<allocationmehtod;i++){
+												    if(cc>=20*(kernel-1))
+												    {cc=cc-20*(kernel-1);
+												     if(areanumber==(400/(20*kernel)*(20/kernel))*h)-1) areanumber=0;
+												     else areanumber +=1;}
+												    else cc+=20;
+												   
+											    }
 											    break;}
 								    }
 								     }
@@ -321,6 +329,14 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 							        param->associatedindex[areanum][1]=(aa+1)*hhiddenpiece-1;
 							               param->associatedindex2[areanum][0]=bb*param->nOutput/os;
 							        param->associatedindex2[areanum][1]=(bb+1)*param->nOutput/os-1;
+							       	 for(int i=  0; i<allocationmehtod;i++){
+							if(cc==hhidenpiece-1)
+							{cc=0;
+						 if(areanumber==(hh-1)) areanumber=0;
+								else areanumber +=1;}
+									 else cc+=1;
+												   
+											    }
 							       break;}
 			           }
 			          }
@@ -329,6 +345,8 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 		            break;
 	                    }
 		    }
+	
+	
 	maxConductance=0; // in case of unwanted situations
 	minConductance=0;
 	pminConductance = 3.0769e-9;
