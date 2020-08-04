@@ -1781,6 +1781,9 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 			cout <<endl;
 			cout <<"weightsum IH: "<<weightsum1<<" weightsum HO:"<<weightsum2;
 			cout <<endl; */
+			  
+			  /* update allocation method */
+			   param->allocationmethod++;
 			} // end of if code
 		
 		
