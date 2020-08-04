@@ -43,6 +43,7 @@
 #include "Array.h"
 #include "Cell.h"
 #include "Param.h"
+using namespace std;
 
 
 
@@ -275,6 +276,8 @@ negstep=0;
 RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 	this->x = x; this->y = y;	// Cell location: x (column) and y (row) start from index 0
 	this-> location =l;
+	
+	cout<<endl;
 	/* allocate area */
 	            switch (location) {
 			    
