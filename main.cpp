@@ -70,6 +70,7 @@ int main() {
 	//arrayIH->Initialization<IdealDevice>();
 
 	arrayIH->Initialization<RealDevice>();
+	cout<<"2"<<endl;
 	//arrayIH->Initialization<MeasuredDevice>();
 	//arrayIH->Initialization<SRAM>(param->numWeightBit);
 	//arrayIH->Initialization<DigitalNVM>(param->numWeightBit,true);
