@@ -298,12 +298,12 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 											    int md=m-t*hiddenpiece;
 											    for(int ii=  0; ii<kernel;ii++){
 												    cout<<"1"<<endl;
-												    	areanumber[ii].push_back(ma*h +  mb);
+												    	areanumber.push_back(ma*h +  mb);
 												    cout<<"1"<<endl;
-											                aa[ii].push_back(ma);
-												        bb[ii].push_back(mb);
-												        cc[ii].push_back(mc);
-												        dd[ii].push_back(md);
+											                aa.push_back(ma);
+												        bb.push_back(mb);
+												        cc.push_back(mc);
+												        dd.push_back(md);
 												    /*    	param->associatedindex2[ii][areanum[ii]][0]=mb*hiddenpiece;
 											     param->associatedindex2[ii][areanum[ii]][1]=(mb+1)*hiddenpiece-1; */
 												    
@@ -343,11 +343,11 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 							       int md = rr;
 							        for(int ii=  0; ii<hhiddenpiece;ii++){
 					
-										areanumber[ii].push_back((400/(20*kernel)*(20/kernel))*h+ ma*os +  mb);
-											              aa[ii].push_back(ma);
-												        bb[ii].push_back(mb);
-												        cc[ii].push_back(mc);
-												        dd[ii].push_back(md);
+										areanumber.push_back((400/(20*kernel)*(20/kernel))*h+ ma*os +  mb);
+											              aa.push_back(ma);
+												        bb.push_back(mb);
+												        cc.push_back(mc);
+												        dd.push_back(md);
 								/*param->associatedindex[ii][areanum[ii]][0]=ma*hhiddenpiece;
 							        param->associatedindex[ii][areanum[ii]][1]=(ma+1)*hhiddenpiece-1;
 							        param->associatedindex2[ii][areanum[ii]][0]=mb*param->nOutput/os;
