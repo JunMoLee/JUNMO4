@@ -1687,16 +1687,16 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 				
 			// cout<<"area "<<areanum<<" "<<adaptlogic(prevposstepcount1[areanum]-prevnegstepcount1[areanum])<<adaptlogic(prevweightsum1[areanum])<<adaptlogic(prevpossatsum1[areanum]-prevnegsatsum1[areanum])<<"    "<<adaptlogic(posstepcount1-negstepcount1)<<adaptlogic(weightsum1)<<adaptlogic(possatsum1-negsatsum1);
 		        for (int areanum4=0; areanum4<400/(kernel*kernel)*h; areanum4++){
-		  /*      cout<<"area "<<areanum<<" "<<updatepattern[areanum][0]*1000+updatepattern[areanum][1]*100+updatepattern[areanum][2]*10+updatepattern[areanum][3];
-		        cout<<"   "<<prevposstepcount[areanum]<<" "<<prevnegstepcount[areanum]<<" "<<posstepcount[areanum]<<" "<<negstepcount[areanum];
+		     cout<<"area "<<areanum4<<" "<<updatepattern[areanum4][0]*1000+updatepattern[areanum4][1]*100+updatepattern[areanum4][2]*10+updatepattern[areanum4][3];
+		        cout<<"   "<<prevposstepcount[areanum4]<<" "<<prevnegstepcount[areanum4]<<" "<<posstepcount[areanum4]<<" "<<negstepcount[areanum4];
 			        double sumgradient=0;
 				cout<<"   ";
-				for(int ai=param->associatedindex2[allocationmethod][areanum][0]; ai<= param->associatedindex2[allocationmethod][areanum][1];ai++){
+				for(int ai=param->associatedindex2[allocationmethod][areanum4][0]; ai<= param->associatedindex2[allocationmethod][areanum4][1];ai++){
 				cout<<ai<<","<<scaling(s1[ai])<<"/";
 			        sumgradient += s1[ai];
 				}
 				cout<<" "<< scaling(sumgradient);
-				cout<<endl; */
+				cout<<endl; 
 			  
 		        
 				    updatepattern[areanum4][0] = adaptlogic(prevposstepcount[areanum4]-prevnegstepcount[areanum4]);
@@ -1746,26 +1746,26 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 				
 			// cout<<"area "<<areanum<<" "<<adaptlogic(prevposstepcount1[areanum]-prevnegstepcount1[areanum])<<adaptlogic(prevweightsum1[areanum])<<adaptlogic(prevpossatsum1[areanum]-prevnegsatsum1[areanum])<<"    "<<adaptlogic(posstepcount1-negstepcount1)<<adaptlogic(weightsum1)<<adaptlogic(possatsum1-negsatsum1);
 		        for (int areanum3=(400/(20*kernel)*(20/kernel))*h; areanum3<(400/(20*kernel)*(20/kernel))*h+hh*os; areanum3++){
-		  /*      cout<<"area "<<areanum<<" "<<updatepattern[areanum][0]*1000+updatepattern[areanum][1]*100+updatepattern[areanum][2]*10+updatepattern[areanum][3];
+		     cout<<"area "<<areanum<<" "<<updatepattern[areanum][0]*1000+updatepattern[areanum][1]*100+updatepattern[areanum][2]*10+updatepattern[areanum][3];
 		        cout<<"   "<<prevposstepcount[areanum]<<" "<<prevnegstepcount[areanum]<<" "<<posstepcount[areanum]<<" "<<negstepcount[areanum];
 			
 				cout<<"   ";
 				double sumactivation=0;
 				double outputgradient=0;
-				for(int ai=param->associatedindex[allocationmethod][areanum][0]; ai<= param->associatedindex[allocationmethod][areanum][1];ai++){
+				for(int ai=param->associatedindex[allocationmethod][areanum3][0]; ai<= param->associatedindex[allocationmethod][areanum3][1];ai++){
 				cout<<ai<<","<<scaling(a1[ai]*(1-a1[ai]))<<"/";
 				sumactivation += a1[ai]*(1-a1[ai]);
 				
 				}
 				cout<<" || ";
-				for(int ai=param->associatedindex2[allocationmethod][areanum][0]; ai<= param->associatedindex2[allocationmethod][areanum][1];ai++){
+				for(int ai=param->associatedindex2[allocationmethod][areanum3][0]; ai<= param->associatedindex2[allocationmethod][areanum3][1];ai++){
 				cout<<ai<<","<<scaling(s2[ai])<<"/";
 		
 				outputgradient += s2[ai];
 				}
 				
 				cout<<" "<<scaling(sumactivation)<<" || "<<scaling(outputgradient);
-				cout<<endl; */
+				cout<<endl; 
 			
 		        
 		        
