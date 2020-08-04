@@ -38,6 +38,9 @@
 #include <string>
 #include "math.h"
 #include "Param.h"
+#include <iostream>
+using namespace std;
+
 
 Param::Param() {
 	for (int r=0; r<400; r++){
