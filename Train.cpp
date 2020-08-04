@@ -1154,7 +1154,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 				      /* weight HO update */
 				                    
 				
-				                           
+				                            int allocationmethod = param -> allocationmethod;
 				    
                                                            int areanum=dynamic_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum[allocationmethod];
 				
@@ -1405,7 +1405,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 								
 								 
 					
-								   param->allocationmethod++;
+								   param->allocationmethod +=param->allocationmethod ;
 								 
 						        } // end of if
 							
