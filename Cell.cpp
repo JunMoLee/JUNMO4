@@ -298,8 +298,8 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 												        bb[ii]=mb;
 												        cc[ii]=mc;
 												        dd[ii]=md;
-												        	param->associatedindex2[ii][areanum[ii]][0]=bb*hiddenpiece;
-											     param->associatedindex2[ii][areanum[ii]][1]=(bb+1)*hiddenpiece-1;
+												        	param->associatedindex2[ii][areanum[ii]][0]=mb*hiddenpiece;
+											     param->associatedindex2[ii][areanum[ii]][1]=(mb+1)*hiddenpiece-1;
 												    
 												    if(mc>=20*(kernel-1))
 												    {mc=mc-20*(kernel-1);
