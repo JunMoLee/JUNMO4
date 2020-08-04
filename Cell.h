@@ -65,7 +65,7 @@ public:
 	vector<int> dd;
       
 	/* define area */
-	vector<int> areanum=0;
+	vector<int> areanum;
 		       int hiddenpiece= param->nHide/h;	
 	               int hhiddenpiece= param ->nHide/hh;
 	               
