@@ -62,7 +62,9 @@ public:
 	int bb=0;
 	int cc=0;
 	int dd=0;
-	
+		
+	/* define area */
+	int areanum=0;
 		       int hiddenpiece= param->nHide/h;	
 	               int hhiddenpiece= param ->nHide/hh;
 	               
@@ -131,9 +133,7 @@ public:
 	/* track average step update */
 	int posstep=0;
 	int negstep=0;
-	
-	/* define area */
-	int areanum=0;
+
 };
 
 class SRAM: public Cell {
