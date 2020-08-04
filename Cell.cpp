@@ -299,6 +299,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 											    for(int ii=  0; ii<kernel;ii++){
 												    cout<<"1"<<endl;
 												    	areanum[ii] = ma*h +  mb;
+												    cout<<"1"<<endl;
 											                aa[ii] =ma;
 												        bb[ii]=mb;
 												        cc[ii]=mc;
