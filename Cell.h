@@ -155,6 +155,16 @@ public:
 	int maxNumLevelLTP;
 	int maxNumLevelLTD;
 	        /*Cell index*/
+	
+	vector<int> aa ;
+	vector<int> bb;
+	vector<int> cc;
+	vector<int> dd;
+      
+	/* define area */
+	vector<int> areanum;
+		       int hiddenpiece= param->nHide/h;	
+	               int hhiddenpiece= param ->nHide/hh;
 
 	int numPulse;   // Number of write pulses used in the most recent write operation (Positive number: LTP, Negative number: LTD) (dynamic variable)
 	double writeLatencyLTP;	// Write latency of a cell during LTP or weight increase (different cells use different # write pulses, thus latency values are different). writeLatency will be calculated for each cell first, and then replaced by the maximum one in the batch write.
@@ -223,15 +233,7 @@ public:
 	double sigmaDtoD;	// Sigma of device-to-device variation on weight update nonliearity baseline
 	double sigmaCtoC;	// Sigma of cycle-to-cycle variation on weight update
 	
-   	vector<int> aa ;
-	vector<int> bb;
-	vector<int> cc;
-	vector<int> dd;
-      
-	/* define area */
-	vector<int> areanum;
-		       int hiddenpiece= param->nHide/h;	
-	               int hhiddenpiece= param ->nHide/hh;
+   	
 	
 	/*PCM*/
 	double NL_LTP_Gp;
