@@ -109,10 +109,10 @@ vector <double> prevweightsum(164000,0);
 				
 /*Optimization functions*/
 
-int adaptlogic (double i){
-	if (i>0) return 3;
-	if (i==0) return 2;
-	if (i<0) return 1;
+int adaptlogic (double ii){
+	if (ii>0) return 3;
+	if (ii==0) return 2;
+	if (ii<0) return 1;
 }
 
 double gradt;
