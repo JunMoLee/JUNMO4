@@ -40,22 +40,22 @@
 #include "Param.h"
 
 Param::Param() {
-	for (int j=0; j<400; j++){
+	for (int r=0; r<400; r++){
         vector <vector <int>> previndex1;
-		for (int i=0;i<164000;i++){
+		for (int f=0;f<164000;f++){
 	vector <int> index1 (2,0);
-	previndex1[i]=index1;
+	previndex1[f]=index1;
 		}
-	associatedindex[j]=previndex1;
+	associatedindex[r]=previndex1;
 	}
 	
-	for (int j=0; j<100; j++){
+	for (int r=0; r<100; r++){
         vector <vector <int>> previndex2;
-		for (int i=0;i<164000;i++){
+		for (int f=0;f<164000;f++){
 	vector <int> index2 (2,0);
-	previndex2[i]=index2;
+	previndex2[f]=index2;
 		}
-	associatedindex2[j]=previndex2;
+	associatedindex2[r]=previndex2;
 	}
 	
 	
