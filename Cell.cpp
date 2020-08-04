@@ -297,9 +297,9 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 											    int mc=a+b;
 											    int md=m-t*hiddenpiece;
 											    for(int ii=  0; ii<kernel;ii++){
-												    cout<<"1"<<endl;
+												  
 												    	areanumber.push_back(ma*h +  mb);
-												    cout<<"1"<<endl;
+												
 											                aa.push_back(ma);
 												        bb.push_back(mb);
 												        cc.push_back(mc);
