@@ -298,7 +298,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 											    int md=m-t*hiddenpiece;
 											    for(int ii=  0; ii<kernel;ii++){
 												    cout<<"1"<<endl;
-												    	areanum[ii] = ma*h +  mb;
+												    	areanumber[ii] = ma*h +  mb;
 												    cout<<"1"<<endl;
 											                aa[ii] =ma;
 												        bb[ii]=mb;
@@ -343,7 +343,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 							       int md = rr;
 							        for(int ii=  0; ii<hhiddenpiece;ii++){
 					
-										areanum[ii] = (400/(20*kernel)*(20/kernel))*h+ ma*os +  mb;
+										areanumber[ii] = (400/(20*kernel)*(20/kernel))*h+ ma*os +  mb;
 											                aa[ii] =ma;
 												        bb[ii]=mb;
 												        cc[ii]=mc;
