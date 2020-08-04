@@ -279,13 +279,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 	this-> location =l;
 	/* allocate area */
 	
-	for(int tt=0;tt<200;tt++){
-		areanum[tt]=0;
-		aa[tt]=0;
-		bb[tt]=0;
-		cc[tt]=0;
-		dd[tt]=0;
-	}
+
 	            switch (location) {
 			    
 			    case 0:
