@@ -1390,6 +1390,9 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 									
 								}
 								
+								 /* update allocation method*/
+								  param->allocationmethod++;
+								 
 						        } // end of if
 							
 								else{ // normal update
@@ -1783,12 +1786,12 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 			cout <<endl; */
 			  
 			  /* update allocation method */
-			   param->allocationmethod++;
+			  
 			} // end of if code
 		
 		
 				
-
+  
 	/* track weight distribution */
 			
  /*	int positiveweight1 ,positiveweight2;
