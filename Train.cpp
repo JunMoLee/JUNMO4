@@ -804,14 +804,14 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 									
 								{ // if + reverse update = - reverse update
 								    
-								    		       	 for(int ii=  0; ii<param->allocationmethod;ii++){
-							if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc==hhiddenpiece-1)
-							{static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc=0;
-						 if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum==(hh-1)) static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum=0;
-								else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum +=1;}
-									 else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc+=1;
+											  	    for(int ii=  0; ii<param->allocationmethod;ii++){
+												    if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc=20*(kernel-1))
+												    {static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc=static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc-20*(kernel-1);
+												     if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum==((400/(20*kernel)*(20/kernel))*h)-1) static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum=0;
+												     else (static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum+=1;}
+												    else static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc+=20;
 												   
-											    }
+											    }	
 									
 								if(((batchSize+numTrain*(epochcount-1)) % (int)(param->newUpdateRate/adNur))*param->ReverseUpdate==((int)(param->newUpdateRate/adNur-1)))
 								// reverse update condition
@@ -1388,14 +1388,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 									
 								{ // if + reverse update = - reverse update
 								    
-											  	    for(int ii=  0; ii<param->allocationmethod;ii++){
-												    if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc=20*(kernel-1))
-												    {static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc=static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc-20*(kernel-1);
-												     if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum==((400/(20*kernel)*(20/kernel))*h)-1) static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum=0;
-												     else (static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum+=1;}
-												    else static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc+=20;
-												   
-											    }	
+					
 								    
 								    					    		       	 for(int ii=  0; ii<param->allocationmethod;ii++){
 							if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc==hhiddenpiece-1)
