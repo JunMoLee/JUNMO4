@@ -41,6 +41,10 @@
 #include <random>
 #include <vector>
 #include "Param.h"
+#include <iostream>
+using namespace std;
+
+cout<<"1"<<endl;
 
 extern Param *param;
 
