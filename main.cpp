@@ -59,6 +59,7 @@
 using namespace std;
 
 int main() {
+	cout<<"1"<<endl;
 	gen.seed(0);
 	cout<<"1" <<endl;
 	/* Load in MNIST data */
