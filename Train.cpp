@@ -142,7 +142,11 @@ double s1[param->nHide];    // Output delta from input layer to the hidden layer
 double s2[param->nOutput];  // Output delta from hidden layer to the output layer [param->nOutput]
 
                                 
-			       int kernel =  static_cast<AnalogNVM*>(arrayIH->cell[0][0])->kernel; 	
+			       
+	
+		     
+	for (int t = 0; t < epochs; t++) {
+		int kernel =  static_cast<AnalogNVM*>(arrayIH->cell[0][0])->kernel; 	
 		               int h = static_cast<AnalogNVM*>(arrayIH->cell[0][0])->h; 
 		               int hh = static_cast<AnalogNVM*>(arrayIH->cell[0][0])->hh; 
 		               int os = static_cast<AnalogNVM*>(arrayIH->cell[0][0])->os;
@@ -150,9 +154,6 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
                                int counteradaptHO =0;
                                int maxcounterIH = param->nHide/h;
 	                       int maxcounterHO = param->nOutput/os;
-	
-		     
-	for (int t = 0; t < epochs; t++) {
 
 
 		for (int batchSize = 0; batchSize < numTrain; batchSize++) {
