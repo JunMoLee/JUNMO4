@@ -41,7 +41,7 @@
 
 
 Param::Param() {
-	for (int r=0; r<400; r++){
+	for (int r=0; r<10; r++){
         vector <vector <int>> previndex1;
 		for (int f=0;f<164000;f++){
 	vector <int> index1 (2,0);
@@ -50,7 +50,7 @@ Param::Param() {
 	associatedindex[r]=previndex1;
 	}
 	
-	for (int r=0; r<100; r++){
+	for (int r=0; r<10; r++){
         vector <vector <int>> previndex2;
 		for (int f=0;f<164000;f++){
 	vector <int> index2 (2,0);
