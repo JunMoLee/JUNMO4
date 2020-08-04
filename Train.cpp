@@ -587,9 +587,9 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 
 				                          /* weight IH update */
 				
-				
+				                           int allocationmethod = param -> allocationmethod;
 				    
-                                                           int areanum=dynamic_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum;
+                                                           int areanum=dynamic_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum[allocationmethod];
 				                           double learningrateIH [4];
 				
 				
@@ -804,15 +804,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 									
 								{ // if + reverse update = - reverse update
 								    
-											  	    for(int ii=  0; ii<param->allocationmethod;ii++){
-												    if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc>=20*(kernel-1))
-												    {static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc=static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc-20*(kernel-1);
-												     if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->aa==(400/(20*kernel)*(20/kernel)-1) )static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->aa=0;
-												     else static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->aa+=1;}
-												    else {static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc +=20; }
-												   
-											    }	
-													static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum = static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->aa*h +  static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->bb;
+								
 									
 								if(((batchSize+numTrain*(epochcount-1)) % (int)(param->newUpdateRate/adNur))*param->ReverseUpdate==((int)(param->newUpdateRate/adNur-1)))
 								// reverse update condition
@@ -1160,7 +1152,12 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 			    {adaptivegradient += s2[f];}
 			    if(adaptivegradient<0) reset=0; */
 				      /* weight HO update */
-				                           int areanum=  dynamic_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum;
+				                    
+				
+				                           int allocationmethod = param -> allocationmethod;
+				    
+                                                           int areanum=dynamic_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum[allocationmethod];
+				
 				                           double learningrateHO [4];
 				                           // classify area by index
 
@@ -1391,16 +1388,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 								    
 					
 								    
-								    					    		       	 for(int ii=  0; ii<param->allocationmethod;ii++){
-							if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc==static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->hhiddenpiece-1)
-							{static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc=0;
-						 if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->aa==(hh-1)) static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->aa=0;
-								else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->aa+=1;}
-									 else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc+=1;
-												   
-											    }
-								    
-								    static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum = static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->aa*os + static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->bb;
+								    					    		       	
 								if(((batchSize+numTrain*(epochcount-1)) % (int)(param->newUpdateRate/adNur))*param->ReverseUpdate==((int)(param->newUpdateRate/adNur-1)))
 								// reverse update condition
 								arrayHO->WriteCell(jj, k, deltaWeight2[jj][k], weight2[jj][k], param->maxWeight, param->minWeight, true, !(posstopreverse*negstopreverse) , (!posstopreverse*negstopreverse), !posstopreverse*!negstopreverse, learningrateHO);
@@ -1672,6 +1660,10 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 			
 		     
                   if ((batchSize+numTrain*(epochcount-1)) % param->TrackRate == (param->TrackRate-1)){
+			                   int allocationmethod = param -> allocationmethod;
+				    
+                                                      
+			  
 	             // weight IH
 		       /* saturation count */
 			/* cout << "epoch : "<<epochcount << " batchSize : " <<batchSize<<endl;
@@ -1680,7 +1672,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 			
                          for (int m=0; m<param->nHide; m++){
 				 for (int n=0; n<param->nInput; n++){
-				int areanum = static_cast<AnalogNVM*>(arrayIH->cell[m][n])->areanum; 	
+				  int areanum=dynamic_cast<AnalogNVM*>(arrayIH->cell[m][n])->areanum[allocationmethod];
 
 				 posstepcount[areanum] += static_cast<AnalogNVM*>(arrayIH->cell[m][n])->posstep;
 				 negstepcount[areanum] += static_cast<AnalogNVM*>(arrayIH->cell[m][n])->negstep;
@@ -1739,7 +1731,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 			
                          for (int m=0; m<param->nOutput; m++){
 				 for (int n=0; n<param->nHide; n++){
-				int areanum = static_cast<AnalogNVM*>(arrayHO->cell[m][n])->areanum; 	
+				 int areanum=dynamic_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum[allocationmethod];
 
 				posstepcount[areanum] += static_cast<AnalogNVM*>(arrayHO->cell[m][n])->posstep;
 				negstepcount[areanum] += static_cast<AnalogNVM*>(arrayHO->cell[m][n])->negstep;
