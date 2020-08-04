@@ -41,7 +41,7 @@
 
 Param::Param() {
 	for (int j=0; j<400; j++){
-        vector <vector <int>> previndex (164000, vector<int>);
+        vector <vector <int>> previndex;
 		for (int i=0;i<164000;i++){
 	vector <int> index (2,0);
 	previndex[i].push_back(index);
@@ -50,7 +50,7 @@ Param::Param() {
 	}
 	
 	for (int j=0; j<100; j++){
-        vector <vector <int>> previndex (164000, vector<int>);
+        vector <vector <int>> previndex;
 		for (int i=0;i<164000;i++){
 	vector <int> index (2,0);
 	previndex[i].push_back(index);
