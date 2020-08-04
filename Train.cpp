@@ -1393,7 +1393,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 								    					    		       	 for(int ii=  0; ii<param->allocationmethod;ii++){
 							if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc==static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->hhiddenpiece-1)
 							{static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc=0;
-						 if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum==(400/(20*kernel)*(20/kernel))*h+(hh-1)) static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum=400/(20*kernel)*(20/kernel))*h;
+						 if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum==(400/(20*kernel)*(20/kernel))*h+(hh-1)) static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum=(400/(20*kernel)*(20/kernel))*h;
 								else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum +=1;}
 									 else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc+=1;
 												   
