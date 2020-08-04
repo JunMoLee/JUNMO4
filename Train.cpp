@@ -1405,7 +1405,7 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 								
 								 
 					
-								   param->allocationmethod +=param->allocationmethod ;
+								   param->allocationmethod +=1 ;
 								 
 						        } // end of if
 							
