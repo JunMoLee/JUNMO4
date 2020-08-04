@@ -44,6 +44,8 @@
 #include "Cell.h"
 #include "Param.h"
 
+using namespace std;
+
 
 
 /* General eNVM */
@@ -292,7 +294,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 											    int mc=a+b;
 											    int md=m-t*hiddenpiece;
 											    for(int ii=  0; ii<kernel;ii++){
-												    
+												    cout<<"1"<<endl;
 												    	areanum[ii] = ma*h +  mb;
 											                aa[ii] =ma;
 												        bb[ii]=mb;
