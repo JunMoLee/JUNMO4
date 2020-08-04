@@ -59,13 +59,13 @@ public:
 	               int hh=25; // hh= number of hidden layer slice for HO
 	               int os=10;  // os = number of output layer slice
 	
-	              	vector<int> aa (400,0);
-	vector<int> bb(400,0);
-	vector<int> cc(400,0);
-	vector<int> dd(400,0);
+	              	vector<int> aa ;
+	vector<int> bb;
+	vector<int> cc;
+	vector<int> dd;
       
 	/* define area */
-	vector<int> areanum(400,0);
+	vector<int> areanum;
 		       int hiddenpiece= param->nHide/h;	
 	               int hhiddenpiece= param ->nHide/hh;
 	               
