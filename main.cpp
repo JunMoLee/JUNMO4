@@ -77,6 +77,8 @@ int main() {
 	/* Initialization of synaptic array from hidden to output layer */
 	//arrayHO->Initialization<IdealDevice>();
 	arrayHO->Initialization<RealDevice>();
+	
+	cout<<"1"<<endl;
 	//arrayHO->Initialization<MeasuredDevice>();
 	//arrayHO->Initialization<SRAM>(param->numWeightBit);
 	//arrayHO->Initialization<DigitalNVM>(param->numWeightBit,true);
