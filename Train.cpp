@@ -807,11 +807,12 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 											  	    for(int ii=  0; ii<param->allocationmethod;ii++){
 												    if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc>=20*(kernel-1))
 												    {static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc=static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc-20*(kernel-1);
-												     if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum==((400/(20*kernel)*(20/kernel))*h)-1) static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum=0;
-												     else static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum+=1;}
+												     if(static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->aa==(400/(20*kernel)*(20/kernel)-1) static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->aa=0;
+												     else static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->aa+=1;}
 												    else {static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->cc +=20; }
 												   
 											    }	
+													static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum = static_cast<AnalogNVM*>(arrayIH->cell[jj][k])->aa*h + bb;
 									
 								if(((batchSize+numTrain*(epochcount-1)) % (int)(param->newUpdateRate/adNur))*param->ReverseUpdate==((int)(param->newUpdateRate/adNur-1)))
 								// reverse update condition
@@ -1393,12 +1394,13 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 								    					    		       	 for(int ii=  0; ii<param->allocationmethod;ii++){
 							if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc==static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->hhiddenpiece-1)
 							{static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc=0;
-						 if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum==(400/(20*kernel)*(20/kernel))*h+(hh-1)) static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum=(400/(20*kernel)*(20/kernel))*h;
-								else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum +=1;}
+						 if(static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->aa==(hh-1)) static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->aa=0;
+								else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->aa+=1;}
 									 else static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->cc+=1;
 												   
 											    }
 								    
+								    static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum = static_cast<AnalogNVM*>(arrayHO->cell[jj][k])->aa*os + bb;
 								if(((batchSize+numTrain*(epochcount-1)) % (int)(param->newUpdateRate/adNur))*param->ReverseUpdate==((int)(param->newUpdateRate/adNur-1)))
 								// reverse update condition
 								arrayHO->WriteCell(jj, k, deltaWeight2[jj][k], weight2[jj][k], param->maxWeight, param->minWeight, true, !(posstopreverse*negstopreverse) , (!posstopreverse*negstopreverse), !posstopreverse*!negstopreverse, learningrateHO);
