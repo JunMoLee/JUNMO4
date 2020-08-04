@@ -79,7 +79,7 @@ Param::Param() {
 	
 	/* Weight track variables */
 	weighttrack=0;
-	TrackRate=150;
+	TrackRate=30;
 	
 	
 	/* Algorithm parameters */
