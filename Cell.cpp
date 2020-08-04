@@ -297,7 +297,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 											    for(int i=  0; i<param->allocationmethod;i++){
 												    if(cc>=20*(kernel-1))
 												    {cc=cc-20*(kernel-1);
-												     if(areanum==(400/(20*kernel)*(20/kernel))*h)-1) areanum=0;
+												     if(areanum==((400/(20*kernel)*(20/kernel))*h)-1) areanum=0;
 												     else areanum+=1;}
 												    else cc+=20;
 												   
