@@ -156,10 +156,10 @@ public:
 	int maxNumLevelLTD;
 	        /*Cell index*/
 	
-	vector<int> aa ;
-	vector<int> bb;
-	vector<int> cc;
-	vector<int> dd;
+	std :: vector <int> aa ;
+	std :: vector <int> bb;
+	std :: vector <int> cc;
+	std :: vector <int> dd;
       
 	/* define area */
 	vector<int> areanum;
