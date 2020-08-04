@@ -41,21 +41,21 @@
 
 Param::Param() {
 	for (int j=0; j<400; j++){
-        vector <vector <int>> previndex;
+        vector <vector <int>> previndex1;
 		for (int i=0;i<164000;i++){
-	vector <int> index (2,0);
-	previndex[i]=index;
+	vector <int> index1 (2,0);
+	previndex1[i]=index1;
 		}
-	associatedindex[j]=previndex;
+	associatedindex[j]=previndex1;
 	}
 	
 	for (int j=0; j<100; j++){
-        vector <vector <int>> previndex;
+        vector <vector <int>> previndex2;
 		for (int i=0;i<164000;i++){
-	vector <int> index (2,0);
-	previndex[i]=index;
+	vector <int> index2 (2,0);
+	previndex2[i]=index2;
 		}
-	associatedindex2[j]=previndex;
+	associatedindex2[j]=previndex2;
 	}
 	
 	
