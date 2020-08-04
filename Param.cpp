@@ -44,18 +44,18 @@ Param::Param() {
         vector <vector <int>> previndex1;
 		for (int f=0;f<164000;f++){
 	vector <int> index1 (2,0);
-	previndex1[f]=index1;
+	previndex1[f].push_back(index1);
 		}
-	associatedindex[r]=previndex1;
+	associatedindex[r].push_back(previndex1);
 	}
 	
 	for (int r=0; r<100; r++){
         vector <vector <int>> previndex2;
 		for (int f=0;f<164000;f++){
 	vector <int> index2 (2,0);
-	previndex2[f]=index2;
+	previndex2[f].push_back(index2);
 		}
-	associatedindex2[r]=previndex2;
+	associatedindex2[r].push_back(previndex2);
 	}
 	
 	
