@@ -43,7 +43,6 @@
 #include "Array.h"
 #include "Cell.h"
 #include "Param.h"
-using namespace std;
 
 
 
@@ -276,8 +275,6 @@ negstep=0;
 RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 	this->x = x; this->y = y;	// Cell location: x (column) and y (row) start from index 0
 	this-> location =l;
-	
-	cout<<endl;
 	/* allocate area */
 	            switch (location) {
 			    
@@ -301,8 +298,8 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 												        bb[ii]=mb;
 												        cc[ii]=mc;
 												        dd[ii]=md;
-												        	param->associatedindex2[ii][areanum[ii]][0]=mb*hiddenpiece;
-											     param->associatedindex2[ii][areanum[ii]][1]=(mb+1)*hiddenpiece-1;
+												    /*    	param->associatedindex2[ii][areanum[ii]][0]=mb*hiddenpiece;
+											     param->associatedindex2[ii][areanum[ii]][1]=(mb+1)*hiddenpiece-1; *?
 												    
 												    if(mc>=20*(kernel-1))
 												    {mc=mc-20*(kernel-1);
@@ -346,10 +343,10 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 												        cc[ii]=mc;
 												        dd[ii]=md;	
 									
-								param->associatedindex[ii][areanum[ii]][0]=ma*hhiddenpiece;
+								/*param->associatedindex[ii][areanum[ii]][0]=ma*hhiddenpiece;
 							        param->associatedindex[ii][areanum[ii]][1]=(ma+1)*hhiddenpiece-1;
 							        param->associatedindex2[ii][areanum[ii]][0]=mb*param->nOutput/os;
-							        param->associatedindex2[ii][areanum[ii]][1]=(mb+1)*param->nOutput/os-1;
+							        param->associatedindex2[ii][areanum[ii]][1]=(mb+1)*param->nOutput/os-1; */
 											if(mc==hhiddenpiece-1)
 							{mc=0;
 						 if(ma==(hh-1)) ma=0;
