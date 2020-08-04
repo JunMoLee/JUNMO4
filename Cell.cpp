@@ -286,17 +286,13 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 			                                         for (int a=0; a<kernel; a+=1){
 			                                          for (int b=0; b<20*kernel; b+=20){
 				                                   int n = u+a+b;
-							             if((x==m) && (y==n))  {areanum = t+ ( 400/(20*kernel)*(q/kernel)+(u-q)/(20*kernel) )*h; 
+							             if((x==m) && (y==n))  {
 											    int ma=q/kernel*(20/kernel)+(u-q)/(20*kernel); 
 											    int mb=t;
 											    int mc=a+b;
 											    int md=m-t*hiddenpiece;
 											    for(int ii=  0; ii<kernel;ii++){
-												    if(mc>=20*(kernel-1))
-												    {mc=mc-20*(kernel-1);
-												     if(ma==(400/(20*kernel)*(20/kernel)-1) ) ma=0;
-												     else ma+=1;}
-												    else {mc +=20; }
+												    
 												    	areanum[ii] = ma*h +  mb;
 											                aa[ii] =ma;
 												        bb[ii]=mb;
@@ -304,6 +300,12 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 												        dd[ii]=md;
 												        	param->associatedindex2[ii][areanum][0]=bb*hiddenpiece;
 											     param->associatedindex2[ii][areanum][1]=(bb+1)*hiddenpiece-1;
+												    
+												    if(mc>=20*(kernel-1))
+												    {mc=mc-20*(kernel-1);
+												     if(ma==(400/(20*kernel)*(20/kernel)-1) ) ma=0;
+												     else ma+=1;}
+												    else {mc +=20; }
 												   
 											    }	
 												
@@ -328,17 +330,13 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 		                 for ( int rr =0; rr<param->nOutput/os; rr++){ 
 			          int m= ry*(param->nOutput/os) +rr;
 			     
-					 if((x==m) && (y==n)) {areanum = (400/(20*kernel)*(20/kernel))*h+z*os+ry; 
+					 if((x==m) && (y==n)) {
 							       int ma = z;
 							       int mb = ry;
 							       int mc = n-z*hhiddenpiece;
 							       int md = rr;
 							        for(int ii=  0; ii<hhidenpiece;ii++){
-							if(mc==hhiddenpiece-1)
-							{mc=0;
-						 if(ma==(hh-1)) ma=0;
-								else ma+=1;}
-									 else mc+=1;
+					
 										areanum[ii] = (400/(20*kernel)*(20/kernel))*h+ ma*os +  mb;
 											                aa[ii] =ma;
 												        bb[ii]=mb;
@@ -349,6 +347,11 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 							        param->associatedindex[ii][areanum][1]=(ma+1)*hhiddenpiece-1;
 							        param->associatedindex2[ii][areanum][0]=mb*param->nOutput/os;
 							        param->associatedindex2[ii][areanum][1]=(mb+1)*param->nOutput/os-1;
+											if(mc==hhiddenpiece-1)
+							{mc=0;
+						 if(ma==(hh-1)) ma=0;
+								else ma+=1;}
+									 else mc+=1;
 											    }
 								    
 								   
