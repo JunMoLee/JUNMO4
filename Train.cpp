@@ -587,9 +587,9 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 
 				                          /* weight IH update */
 				
-				                           int allocationmethod = param -> allocationmethod;
+				                           int allocationmethod1 = param -> allocationmethod;
 				    
-                                                           int areanum=dynamic_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum[allocationmethod];
+                                                           int areanum=dynamic_cast<AnalogNVM*>(arrayIH->cell[jj][k])->areanum[allocationmethod1];
 				                           double learningrateIH [4];
 				
 				
@@ -1154,9 +1154,9 @@ double s2[param->nOutput];  // Output delta from hidden layer to the output laye
 				      /* weight HO update */
 				                    
 				
-				                            int allocationmethod = param -> allocationmethod;
+				                            int allocationmethod2 = param -> allocationmethod;
 				    
-                                                           int areanum=dynamic_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum[allocationmethod];
+                                                           int areanum=dynamic_cast<AnalogNVM*>(arrayHO->cell[jj][k])->areanum[allocationmethod2];
 				
 				                           double learningrateHO [4];
 				                           // classify area by index
