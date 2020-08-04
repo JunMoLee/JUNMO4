@@ -60,9 +60,9 @@ public:
 	               int os=10;  // os = number of output layer slice
 	
 	              	vector<int> aa;
-	vector<int> bb=0;
-	vector<int> cc=0;
-	vector<int> dd=0;
+	vector<int> bb;
+	vector<int> cc;
+	vector<int> dd;
       
 	/* define area */
 	vector<int> areanum=0;
