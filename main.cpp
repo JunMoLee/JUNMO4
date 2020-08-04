@@ -59,16 +59,16 @@
 using namespace std;
 
 int main() {
-	cout<<"1"<<endl;
+	
 	gen.seed(0);
-	cout<<"1" <<endl;
+	
 	/* Load in MNIST data */
 	ReadTrainingDataFromFile("patch60000_train.txt", "label60000_train.txt");
 	ReadTestingDataFromFile("patch10000_test.txt", "label10000_test.txt");
 
 	/* Initialization of synaptic array from input to hidden layer */
 	//arrayIH->Initialization<IdealDevice>();
-	cout<<"2"<<endl;
+
 	arrayIH->Initialization<RealDevice>();
 	//arrayIH->Initialization<MeasuredDevice>();
 	//arrayIH->Initialization<SRAM>(param->numWeightBit);
