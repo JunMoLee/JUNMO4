@@ -42,7 +42,6 @@
 #include <vector>
 #include "Param.h"
 
-
 extern Param *param;
 
 
@@ -127,15 +126,7 @@ public:
 	/* track average step update */
 	int posstep=0;
 	int negstep=0;
-   	vector<int> aa ;
-	vector<int> bb;
-	vector<int> cc;
-	vector<int> dd;
-      
-	/* define area */
-	vector<int> areanum;
-		       int hiddenpiece= param->nHide/h;	
-	               int hhiddenpiece= param ->nHide/hh;
+
 };
 
 class SRAM: public Cell {
@@ -231,7 +222,16 @@ public:
 	double paramBLTD;	// Parameter B for LTD nonlinearity
 	double sigmaDtoD;	// Sigma of device-to-device variation on weight update nonliearity baseline
 	double sigmaCtoC;	// Sigma of cycle-to-cycle variation on weight update
-
+	
+   	vector<int> aa ;
+	vector<int> bb;
+	vector<int> cc;
+	vector<int> dd;
+      
+	/* define area */
+	vector<int> areanum;
+		       int hiddenpiece= param->nHide/h;	
+	               int hhiddenpiece= param ->nHide/hh;
 	
 	/*PCM*/
 	double NL_LTP_Gp;
