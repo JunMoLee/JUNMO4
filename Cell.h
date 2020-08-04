@@ -44,8 +44,6 @@
 #include <iostream>
 using namespace std;
 
-cout<<"1"<<endl;
-
 extern Param *param;
 
 
@@ -55,7 +53,7 @@ public:
 	int x, y;	// Cell location: x (column) and y (row) start from index 0
 	double heightInFeatureSize, widthInFeatureSize;	// Cell height/width in terms of feature size (F)
 	double area;	// Cell area (m^2)
-	
+	cout<<"1"<<endl;
 	/*array parameters */
 	               int location=0;// verify whether it is in IH or HO
 		       int kernel=4; // k=kernel size;
