@@ -294,7 +294,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 											
 											    	    param->associatedindex2[areanum][0]=bb*hiddenpiece;
 											     param->associatedindex2[areanum][1]=(bb+1)*hiddenpiece-1;
-											    for(int i=  0; i<allocationmehtod;i++){
+											    for(int i=  0; i<param->allocationmehtod;i++){
 												    if(cc>=20*(kernel-1))
 												    {cc=cc-20*(kernel-1);
 												     if(areanumber==(400/(20*kernel)*(20/kernel))*h)-1) areanumber=0;
@@ -329,7 +329,7 @@ RealDevice::RealDevice(int x, int y, double p, double n, int l) {
 							        param->associatedindex[areanum][1]=(aa+1)*hhiddenpiece-1;
 							               param->associatedindex2[areanum][0]=bb*param->nOutput/os;
 							        param->associatedindex2[areanum][1]=(bb+1)*param->nOutput/os-1;
-							       	 for(int i=  0; i<allocationmehtod;i++){
+							       	 for(int i=  0; i<param->allocationmehtod;i++){
 							if(cc==hhidenpiece-1)
 							{cc=0;
 						 if(areanumber==(hh-1)) areanumber=0;
