@@ -162,7 +162,7 @@ public:
 	std :: vector <int> dd;
       
 	/* define area */
-	vector<int> areanum;
+	std :: vector<int> areanum;
 		       int hiddenpiece= param->nHide/h;	
 	               int hhiddenpiece= param ->nHide/hh;
 	
