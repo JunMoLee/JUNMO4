@@ -59,15 +59,7 @@ public:
 	               int hh=25; // hh= number of hidden layer slice for HO
 	               int os=10;  // os = number of output layer slice
 	
-	              	vector<int> aa ;
-	vector<int> bb;
-	vector<int> cc;
-	vector<int> dd;
-      
-	/* define area */
-	vector<int> areanum;
-		       int hiddenpiece= param->nHide/h;	
-	               int hhiddenpiece= param ->nHide/hh;
+	           
 	               
 	
 	virtual ~Cell() {}	// Add a virtual function to enable dynamic_cast
@@ -134,7 +126,15 @@ public:
 	/* track average step update */
 	int posstep=0;
 	int negstep=0;
-
+   	vector<int> aa ;
+	vector<int> bb;
+	vector<int> cc;
+	vector<int> dd;
+      
+	/* define area */
+	vector<int> areanum;
+		       int hiddenpiece= param->nHide/h;	
+	               int hhiddenpiece= param ->nHide/hh;
 };
 
 class SRAM: public Cell {
