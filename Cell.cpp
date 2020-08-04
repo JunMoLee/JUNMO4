@@ -39,6 +39,7 @@
 #include <ctime>
 #include <iostream>
 #include <math.h>
+#include <vector>
 #include "formula.h"
 #include "Array.h"
 #include "Cell.h"
