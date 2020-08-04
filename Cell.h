@@ -166,13 +166,7 @@ public:
 		       int hiddenpiece= param->nHide/h;	
 	               int hhiddenpiece= param ->nHide/hh;
 	
-		for(int tt=0;tt<200;tt++){
-		areanum[tt]=0;
-		aa[tt]=0;
-		bb[tt]=0;
-		cc[tt]=0;
-		dd[tt]=0;
-	}
+
 
 	int numPulse;   // Number of write pulses used in the most recent write operation (Positive number: LTP, Negative number: LTD) (dynamic variable)
 	double writeLatencyLTP;	// Write latency of a cell during LTP or weight increase (different cells use different # write pulses, thus latency values are different). writeLatency will be calculated for each cell first, and then replaced by the maximum one in the batch write.
